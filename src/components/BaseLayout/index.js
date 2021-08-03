@@ -8,7 +8,7 @@ export default function BaseLayout({ children }) {
   return (
     <Layout>
       <Header className="header">
-        <div className="logo" />
+        <h1 style={{ color: "white" }}>Star Wars</h1>
       </Header>
       <Layout>
         <Sider width={200} className="site-layout-background">

@@ -1,4 +1,5 @@
 import ListCharacter from "../views/Characters/List";
+import DetailCharacter from "../views/Characters/Detail";
 
 export default {
   characters: {
@@ -8,6 +9,6 @@ export default {
   },
   charactersDetail: {
     path: "/:id",
-    Component: () => <h1>Detail Characters</h1>,
+    Component: DetailCharacter,
   },
 };

@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { Table, Spin, Tag } from "antd";
+import { Link } from "react-router-dom";
 import { fetchCharacterAction } from "../../stores/actions/character.action";
-
 import customColors from "../../constant/customColors";
 
 const { Column } = Table;
@@ -48,6 +48,11 @@ function ListCharacter(props) {
           title="Gender"
           dataIndex="gender"
           render={(gender) => (gender !== "n/a" ? gender : "")}
+        />
+        <Column
+          title="Actions"
+          dataIndex="name"
+          render={(name) => <Link to={`/${name}`}>Detail</Link>}
         />
       </Table>
     </Spin>
