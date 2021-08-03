@@ -4,8 +4,8 @@ import api from "../../api";
 export const fetchCharacterAction = () => {
   return async (dispatch) => {
     try {
-      dispatch({ type: types.FETCH_CHARACTERS["REQUEST"] });
-      const data = await api.character.getAll();
+      const { data } = await api.character.getAll();
+      dispatch({ type: types.FETCH_CHARACTERS["SUCCESS"], payload: data });
     } catch (error) {
       dispatch({ type: types.FETCH_CHARACTERS["FAILED"] });
     }

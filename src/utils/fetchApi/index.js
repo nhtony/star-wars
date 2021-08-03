@@ -1,5 +1,5 @@
 export default async function fetchApi(url, options = {}) {
-  const apiUrl = "https://swapi.dev/api/" + url;
+  const apiUrl = "https://swapi.dev/api" + url;
 
   const response = await fetch(apiUrl, { ...options });
 
@@ -7,8 +7,10 @@ export default async function fetchApi(url, options = {}) {
 
   const { status } = response;
 
-  console.log("body", body);
 
   if (status != 200) {
+    throw new Error("Error msg");
   }
+
+  return { status, data: body.results };
 }
