@@ -1,6 +1,6 @@
 # Getting Started
 
-This project display basic information of Star Wars characters.
+This project displays basic information of Star Wars characters.
 
 ## Todo
 
